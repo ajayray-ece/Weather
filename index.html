@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StormEye - Weather Forecast</title>
+    <link rel="stylesheet" href="app/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="logo-container">
+                <img src="app/images/logo.jpeg" alt="StormEye Logo" class="logo">
+            </div>
+            <div class="brand-container">
+                <h1 class="brand-name">StormEye</h1>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-location-dot location-icon"></i>
+                <input type="text" id="search-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        
+        <div class="weather-container">
+            <div class="main-info">
+                <div class="current-weather">
+                    <div class="location">
+                        <h2 id="city-name">--</h2>
+                        <p id="date">--</p>
+                    </div>
+                    <div class="temperature">
+                        <h1 id="temp">--°C</h1>
+                        <p id="weather-desc">--</p>
+                    </div>
+                    <div class="details">
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Wind Speed</span>
+                                <span id="wind">-- km/h</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Humidity</span>
+                                <span id="humidity">--%</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Pressure</span>
+                                <span id="pressure">-- hPa</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-lungs"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Air Quality</span>
+                                <span id="air-quality">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <div class="forecast-container">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-list" id="forecast-list">
+                    <!-- Forecast items will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCceyrrqXwpD2en6Q9KRkSNqskZ_DIKeos"></script>
+    <script src="app/js/script.js"></script>
+</body>
+</html>
